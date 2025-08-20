@@ -1574,6 +1574,69 @@ export type Database = {
         }
         Relationships: []
       }
+      chatbot_conversations: {
+        Row: {
+          bot_response: string
+          context_data: Json | null
+          created_at: string | null
+          id: string
+          updated_at: string | null
+          user_id: string
+          user_message: string
+        }
+        Insert: {
+          bot_response: string
+          context_data?: Json | null
+          created_at?: string | null
+          id?: string
+          updated_at?: string | null
+          user_id: string
+          user_message: string
+        }
+        Update: {
+          bot_response?: string
+          context_data?: Json | null
+          created_at?: string | null
+          id?: string
+          updated_at?: string | null
+          user_id?: string
+          user_message?: string
+        }
+        Relationships: []
+      }
+      chatbot_learning_patterns: {
+        Row: {
+          created_at: string | null
+          feedback_score: number | null
+          id: string
+          interaction_timestamp: string | null
+          question_pattern: string
+          response_category: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          feedback_score?: number | null
+          id?: string
+          interaction_timestamp?: string | null
+          question_pattern: string
+          response_category?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          feedback_score?: number | null
+          id?: string
+          interaction_timestamp?: string | null
+          question_pattern?: string
+          response_category?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       churches: {
         Row: {
           address: string | null
