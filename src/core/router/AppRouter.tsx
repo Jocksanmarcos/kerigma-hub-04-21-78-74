@@ -34,6 +34,7 @@ const GovernancePage = React.lazy(() => import("@/pages/admin/GovernancePage"));
 const IAPastoralPage = React.lazy(() => import("@/pages/admin/IAPastoralPage"));
 const SitePage = React.lazy(() => import("@/pages/admin/SitePage"));
 const BuscaVoluntariosPage = React.lazy(() => import("@/pages/admin/BuscaVoluntariosPage"));
+const SuportePage = React.lazy(() => import("@/pages/Suporte"));
 
 const PublicHomePage = React.lazy(() => import("@/pages/public/StablePublicHomePage"));
 const PublicSobrePage = React.lazy(() => import("@/pages/public/PublicSobrePage"));
@@ -127,6 +128,9 @@ export const AppRouter: React.FC = () => {
         <Route path="/admin/governanca" element={<ProtectedRoute><GovernancePage /></ProtectedRoute>} />
         <Route path="/admin/ia-pastoral" element={<ProtectedRoute><IAPastoralPage /></ProtectedRoute>} />
         <Route path="/admin/busca-voluntarios" element={<ProtectedRoute><BuscaVoluntariosPage /></ProtectedRoute>} />
+        
+        {/* Suporte Route */}
+        <Route path="/suporte" element={<ProtectedRoute><SuportePage /></ProtectedRoute>} />
 
         {/* Fallback Routes */}
         <Route path="/404" element={<NotFound />} />

@@ -140,8 +140,7 @@ export const useChatbotSupport = () => {
                 response_category: assistantMsg.category,
                 interaction_timestamp: new Date().toISOString(),
                 feedback_score: null // Para implementar feedback futuro
-              })
-              .onConflict('user_id,question_pattern');
+              });
           }
         }
       }

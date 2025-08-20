@@ -20,6 +20,7 @@ import {
   ClipboardList,
   Globe,
   Search,
+  HelpCircle,
 } from 'lucide-react';
 import { useNewUserRole, newRolePermissions, UserRole } from '@/hooks/useNewRole';
 import {
@@ -61,6 +62,7 @@ const relatoriosNavItems = [
 
 // Administração
 const adminNavItems = [
+  { title: 'Suporte', url: '/suporte', icon: HelpCircle, page: 'suporte' },
   { title: 'Configurações', url: '/admin/configuracoes', icon: Settings, page: 'configuracoes', roles: ['pastor', 'lider'] },
   { title: 'Sistema', url: '/admin/governanca', icon: ShieldCheck, page: 'sistema', roles: ['pastor'] },
   { title: 'Busca de Talentos', url: '/admin/busca-voluntarios', icon: Search, page: 'busca-voluntarios', roles: ['pastor', 'lider'] },
